@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<head>
+	<meta name="GENERATOR" content="MatchWare Mediator 9.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="">
+	<link rel="Next" href="page2.html">
+	<link rel="Previous" href="index.html">
+	<script type="text/javascript" language="javascript" src="md8_design.js"></script>
+	<script type="text/javascript" language="javascript" src="md8lib.js"></script>
+    <script type="text/javascript" language="javascript">
+	
+// Variables
+
+// Object definitions
+
+// Action definitions
+function LoadActions(){
+ actions.page1_action01 = new PageAction( "page2.html")
+ page1_bouton_oldmd = FindObject( "page1_bouton").onmousedown;
+ if ( page1_bouton_oldmd)
+   FindObject( "page1_bouton").onmousedown = function(){ page1_bouton_MouseDown(); page1_bouton_oldmd(); };
+ else
+   FindObject( "page1_bouton").onmousedown = function(){ page1_bouton_MouseDown(); };
+ page1_bouton_oldmu = FindObject( "page1_bouton").onmouseup;
+ if ( page1_bouton_oldmu)
+   FindObject( "page1_bouton").onmouseup = function(){ page1_bouton_MouseUp(); page1_bouton_oldmu(); };
+ else
+   FindObject( "page1_bouton").onmouseup = function(){ page1_bouton_MouseUp(); };
+
+}
+
+
+function OnPageReady(){
+AddMPlayer('page1_mplayer', '000006.mp4', 1,'full', 270, 273, 2)
+
+}
+function page1_bouton_MouseDown() {
+ clickobj=FindObject( "page1_bouton");
+}
+
+function page1_bouton_MouseUp() {
+ if ( clickobj == FindObject( "page1_bouton")) {
+ actions.page1_action01.Start();
+ }
+ clickobj=null;
+}
+
+var g_bContainsSSScript = false;
+if (g_bContainsSSScript && top.location.protocol == "file:") {
+alert("Attention : La page que vous tentez d'afficher contient du script serveur.\nVous devez d'abord télécharger la page afin de pouvoir la visionner correctement.");
+}
+
+    </script>
+    <title>Page1</title>
+<!--[if lt IE 7]> 
+    <style type="text/css"> 
+    img.alphapng { filter:expression(addPngImage(this)); } 
+    </style> 
+    <![endif]--> 
+</head>
+<body style="background:#FFFFFF;" onload="InitPage('566px');">
+<div id="cursordiv" style="position:absolute; left:0px; top:0px; width:2000px; height:2000px">
+<table width="2000px" height="2000px"><tr><td></td></tr></table>
+</div>
+<div id="page1_arr3eveil1"
+     style="font-size:1px; position:absolute; left:0px; top:0px; width:1007px; height:566px; ">
+<img src="000001.png"
+alt=""
+title=""
+     width="1007"
+     height="566"
+>
+</div>
+
+<div id="page1_titre"
+     style="font-size:1px; position:absolute; left:269px; top:50px; width:361px; height:116px; ">
+<img class="alphapng" alt="" src="000002.png"
+     width="361"
+     height="116"
+>
+</div>
+
+<div id="page1_bouton"
+     style="font-size:1px; position:absolute; left:885px; top:79px; width:89px; height:41px;"
+onmouseout="FindObject( 'page1_bouton_JSGpressed').style.visibility='hidden'"
+onmousedown="FindObject( 'page1_bouton_JSGpressed').style.visibility='visible'"
+onmouseup="FindObject( 'page1_bouton_JSGpressed').style.visibility='hidden'"
+>
+<img class="alphapng" src="000003.png" style="position:absolute; left:0; top:0;" onmousedown="FindObject( 'page1_bouton_JSGpressed').style.visibility='visible'"
+>
+<img class="alphapng"  id="page1_bouton_JSGpressed" src="000005.png" style="position:absolute; left:0; top:0; visibility:hidden;">
+</div>
+
+<div id='page1_mplayer' class='m8mplayer' style='position:absolute; left:303px; top:176px; width:270px; height:273px;'>
+</div>
+
+</body>
+</html>
